@@ -1,9 +1,8 @@
-Courtify backend (full upload support)
-- Multer middleware: middleware/file-upload.js (diskStorage -> uploads/images, uuid filenames, MIME filter, size limit)
-- Routes:
-  POST /api/users/signup (multipart/form-data, image optional)
-  POST /api/users/login
-  POST /api/places (multipart/form-data, image required)
-  DELETE /api/places/:pid
-- Static files served at /uploads/images
-- Start: npm install && npm start
+- disk storage → saves to uploads/images (multer)
+- UUID-generated filenames
+- Only accepts: png, jpeg, jpg file types
+- 5 MB file size limit
+- User signup: accepts an image and stores the file path in the database.
+- Place creation: accepts an image and stores the file path.
+- Error handler: Deletes uploaded files if an error happens after saving.
+- Deleting a place removes the associated image file from disk (fs.unlink).
