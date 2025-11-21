@@ -1,12 +1,10 @@
 {
-  "name": "backend",
+  "name": "courtify-backend-full",
   "version": "1.0.0",
-  "description": "Backend for image upload tutorial",
   "main": "app.js",
   "type": "commonjs",
   "scripts": {
-    "start": "node app.js",
-    "dev": "nodemon app.js"
+    "start": "node app.js"
   },
   "dependencies": {
     "express": "^4.18.2",
